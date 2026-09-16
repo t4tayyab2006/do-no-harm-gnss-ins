@@ -1,0 +1,22 @@
+{
+  "q": {
+    "q_accel": 0.05,
+    "q_gyro": 0.002,
+    "q_bias": 1e-06
+  },
+  "cfg": {
+    "kappa": 3.0,
+    "detector_acc": 0.9697674418604652,
+    "n_train_fixes": 2964,
+    "n_degraded": 440,
+    "classical_vi": 16.0,
+    "classical_qthr": 1.0,
+    "classical_tune_rmse": 4.459003556470097,
+    "learned_vi": 16.0,
+    "learned_tune_rmse": 4.41239504032394
+  },
+  "detector_path": "../results/detector_real_k3.0.pt",
+  "knet_path": "../results/knet_real.npz",
+  "sh_b": 0.9,
+  "cm_N": 10
+}

@@ -1,0 +1,71 @@
+{
+  "n": 600,
+  "splits": 200,
+  "n_test": 150,
+  "cal_sizes": [
+    150,
+    300,
+    450
+  ],
+  "rng_seed": 1,
+  "learnedR": {
+    "150": {
+      "mean_ratio": 0.9379342166197644,
+      "share_certified_beyond_classical": 1.0,
+      "share_splits_better_than_classical": 1.0,
+      "share_splits_worse_than_classical": 0.0,
+      "mean_ratio_when_certified": 0.9379342166197644,
+      "worst": 1.875722086714483,
+      "violation_frequency": 0.0
+    },
+    "300": {
+      "mean_ratio": 0.9308167143264571,
+      "share_certified_beyond_classical": 1.0,
+      "share_splits_better_than_classical": 1.0,
+      "share_splits_worse_than_classical": 0.0,
+      "mean_ratio_when_certified": 0.9308167143264571,
+      "worst": 2.095993977609173,
+      "violation_frequency": 0.0
+    },
+    "450": {
+      "mean_ratio": 0.9233396368516011,
+      "share_certified_beyond_classical": 1.0,
+      "share_splits_better_than_classical": 1.0,
+      "share_splits_worse_than_classical": 0.0,
+      "mean_ratio_when_certified": 0.9233396368516011,
+      "worst": 2.0902016814357776,
+      "violation_frequency": 0.0
+    }
+  },
+  "knet": {
+    "150": {
+      "mean_ratio": 0.9384087100404969,
+      "share_certified_beyond_classical": 0.54,
+      "share_splits_better_than_classical": 0.54,
+      "share_splits_worse_than_classical": 0.0,
+      "mean_ratio_when_certified": 0.8859420556305498,
+      "worst": 1.3538540443041325,
+      "violation_frequency": 0.015
+    },
+    "300": {
+      "mean_ratio": 0.9151263968439488,
+      "share_certified_beyond_classical": 0.765,
+      "share_splits_better_than_classical": 0.765,
+      "share_splits_worse_than_classical": 0.0,
+      "mean_ratio_when_certified": 0.889054113521502,
+      "worst": 1.520113480910561,
+      "violation_frequency": 0.04
+    },
+    "450": {
+      "mean_ratio": 0.8606237742991144,
+      "share_certified_beyond_classical": 1.0,
+      "share_splits_better_than_classical": 1.0,
+      "share_splits_worse_than_classical": 0.0,
+      "mean_ratio_when_certified": 0.8606237742991144,
+      "worst": 1.6879814563762872,
+      "violation_frequency": 0.07
+    }
+  },
+  "H4_more_calibration_helps_pass": true,
+  "H5_validity_retained_pass": true
+}

@@ -1,0 +1,26 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite the manuscript below."
+title: "Do No Harm: certified deployment of learned adaptive filters for GNSS/INS"
+authors:
+  - family-names: Tayyab
+    given-names: Muhammad
+    email: muhammad.tayyab@graduate.univaq.it
+    affiliation: "Department of Industrial and Information Engineering and Economics (DIIIE), University of L'Aquila, Italy"
+license: MIT
+date-released: 2026-09-16
+keywords:
+  - GNSS/INS integration
+  - adaptive Kalman filter
+  - learned noise covariance
+  - Learn-then-Test
+  - solution separation
+  - safe deployment of machine learning
+preferred-citation:
+  type: article
+  title: "Do No Harm: Distribution-Free Certification of Learned Adaptive Filters for GNSS/INS Integration via Learned-versus-Classical Solution Separation"
+  authors:
+    - family-names: Tayyab
+      given-names: Muhammad
+  journal: "Sensors"
+  year: 2026
+  notes: "Manuscript submitted; under review."

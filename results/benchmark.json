@@ -1,0 +1,346 @@
+{
+  "sim": {
+    "classical_baselines": {
+      "fixed": {
+        "mean_ratio": 1.161225933292732,
+        "harm10": 0.44760000000000005,
+        "severe50": 0.0908,
+        "worst": 4.91242550020952,
+        "violations": 1.0,
+        "mean_rmse": 11.502159410773045
+      },
+      "sagehusa": {
+        "mean_ratio": 1.4706606717748818,
+        "harm10": 0.45941666666666664,
+        "severe50": 0.18463333333333334,
+        "worst": 46.45972328911359,
+        "violations": 1.0,
+        "mean_rmse": 13.68222315745716
+      },
+      "covmatch": {
+        "mean_ratio": 1.956835193764997,
+        "harm10": 0.6380333333333332,
+        "severe50": 0.3325666666666667,
+        "worst": 40.132207452637616,
+        "violations": 1.0,
+        "mean_rmse": 18.506730897504262
+      },
+      "fallback": {
+        "mean_ratio": 1.0,
+        "harm10": 0.0,
+        "severe50": 0.0,
+        "worst": 1.0,
+        "violations": 0.0,
+        "mean_rmse": 10.227438570044026
+      }
+    },
+    "learned": {
+      "learnedR": {
+        "ungated": {
+          "mean_ratio": 0.9645008541356269,
+          "harm10": 0.11286666666666668,
+          "severe50": 0.021449999999999997,
+          "worst": 10.500218501271473,
+          "violations": 0.825,
+          "mean_rmse": 9.349748256050937
+        },
+        "naive": {
+          "mean_ratio": 0.9675203959397769,
+          "harm10": 0.10706666666666667,
+          "severe50": 0.019016666666666664,
+          "worst": 10.143149628134823,
+          "violations": 0.695,
+          "mean_rmse": 9.498082293844137
+        },
+        "gauss_ss": {
+          "mean_ratio": 0.9381373193748681,
+          "harm10": 0.10446666666666667,
+          "severe50": 0.011783333333333333,
+          "worst": 1.9542771805287074,
+          "violations": 0.58,
+          "mean_rmse": 9.32101154124841
+        },
+        "imm": {
+          "mean_ratio": 0.9340087908707845,
+          "harm10": 0.05373333333333334,
+          "severe50": 0.012083333333333335,
+          "worst": 1.9489065524648674,
+          "violations": 0.0,
+          "mean_rmse": 9.181011322191905
+        },
+        "certified_single": {
+          "mean_ratio": 0.9503398039929017,
+          "harm10": 0.07058333333333333,
+          "severe50": 0.002916666666666667,
+          "worst": 1.6700767676267292,
+          "violations": 0.0,
+          "mean_rmse": 9.80242399854652
+        },
+        "certified_two_level": {
+          "mean_ratio": 0.950554795114086,
+          "harm10": 0.07036666666666667,
+          "severe50": 0.0032666666666666664,
+          "worst": 1.6864484569155223,
+          "violations": 0.0,
+          "mean_rmse": 9.802315555438064
+        }
+      },
+      "knet": {
+        "ungated": {
+          "mean_ratio": 2.194409970909884,
+          "harm10": 0.33081666666666665,
+          "severe50": 0.21651666666666664,
+          "worst": 94.55043036709327,
+          "violations": 1.0,
+          "mean_rmse": 17.625043939297413
+        },
+        "naive": {
+          "mean_ratio": 1.0,
+          "harm10": 0.0,
+          "severe50": 0.0,
+          "worst": 1.0,
+          "violations": 0.0,
+          "mean_rmse": 10.227438570044026
+        },
+        "gauss_ss": {
+          "mean_ratio": 1.0548681461539746,
+          "harm10": 0.40753333333333336,
+          "severe50": 0.17311666666666667,
+          "worst": 4.130816966696384,
+          "violations": 1.0,
+          "mean_rmse": 9.637750842601438
+        },
+        "imm": {
+          "mean_ratio": 0.840099099177822,
+          "harm10": 0.08345000000000001,
+          "severe50": 0.008383333333333333,
+          "worst": 2.2671713663677697,
+          "violations": 0.05,
+          "mean_rmse": 7.591185461300988
+        },
+        "certified_single": {
+          "mean_ratio": 1.0,
+          "harm10": 0.0,
+          "severe50": 0.0,
+          "worst": 1.0,
+          "violations": 0.0,
+          "mean_rmse": 10.227438570044026
+        },
+        "certified_two_level": {
+          "mean_ratio": 1.0,
+          "harm10": 0.0,
+          "severe50": 0.0,
+          "worst": 1.0,
+          "violations": 0.0,
+          "mean_rmse": 10.227438570044026
+        }
+      }
+    },
+    "pool_mean_rmse": {
+      "fixed": 11.477913282033779,
+      "sagehusa": 13.755245072529227,
+      "covmatch": 18.43162900415067,
+      "learnedR": 9.342722609047344,
+      "knet": 17.38111333640132,
+      "learnedR_gauss_ss": 9.291285539814645,
+      "knet_gauss_ss": 9.560994682652042,
+      "learnedR_imm": 9.153392350083072,
+      "knet_imm": 7.554638730575739,
+      "classical": 10.193165676038252
+    }
+  },
+  "real": {
+    "classical_baselines": {
+      "fixed": {
+        "mean_ratio": 1.2314398251260474,
+        "harm10": 0.523801652892562,
+        "severe50": 0.21132231404958682,
+        "worst": 3.1465673684468154,
+        "violations": 1.0,
+        "mean_rmse": 5.769930537988602
+      },
+      "sagehusa": {
+        "mean_ratio": 1.2628121855530805,
+        "harm10": 0.5361570247933883,
+        "severe50": 0.20574380165289255,
+        "worst": 4.547018657301401,
+        "violations": 1.0,
+        "mean_rmse": 6.043215913129007
+      },
+      "covmatch": {
+        "mean_ratio": 1.4619213468530001,
+        "harm10": 0.5232644628099173,
+        "severe50": 0.22826446280991738,
+        "worst": 10.452011726310097,
+        "violations": 1.0,
+        "mean_rmse": 6.9626441791468565
+      },
+      "fallback": {
+        "mean_ratio": 1.0,
+        "harm10": 0.0,
+        "severe50": 0.0,
+        "worst": 1.0,
+        "violations": 0.0,
+        "mean_rmse": 4.964962959137697
+      }
+    },
+    "learned": {
+      "learnedR": {
+        "ungated": {
+          "mean_ratio": 0.9756237075272335,
+          "harm10": 0.0912396694214876,
+          "severe50": 0.011776859504132231,
+          "worst": 1.8581458731659273,
+          "violations": 0.255,
+          "mean_rmse": 4.864616446081515
+        },
+        "naive": {
+          "mean_ratio": 0.9719884184872839,
+          "harm10": 0.0716115702479339,
+          "severe50": 0.006280991735537189,
+          "worst": 1.4722519598616908,
+          "violations": 0.11,
+          "mean_rmse": 4.845685256480382
+        },
+        "gauss_ss": {
+          "mean_ratio": 0.9756237075272335,
+          "harm10": 0.0912396694214876,
+          "severe50": 0.011776859504132231,
+          "worst": 1.8581458731659273,
+          "violations": 0.255,
+          "mean_rmse": 4.864616446081515
+        },
+        "imm": {
+          "mean_ratio": 0.9787281663077811,
+          "harm10": 0.037355371900826446,
+          "severe50": 0.0038016528925619835,
+          "worst": 1.517623695997225,
+          "violations": 0.0,
+          "mean_rmse": 4.869385608419687
+        },
+        "certified_single": {
+          "mean_ratio": 0.9723377075176923,
+          "harm10": 0.059710743801652894,
+          "severe50": 0.004297520661157025,
+          "worst": 1.3948999979820167,
+          "violations": 0.06,
+          "mean_rmse": 4.839813456897742
+        },
+        "certified_two_level": {
+          "mean_ratio": 0.9744617194118564,
+          "harm10": 0.05289256198347107,
+          "severe50": 0.004090909090909091,
+          "worst": 1.3797477758652053,
+          "violations": 0.045,
+          "mean_rmse": 4.848977272238484
+        }
+      },
+      "knet": {
+        "ungated": {
+          "mean_ratio": 2.490720308795779,
+          "harm10": 0.8907851239669421,
+          "severe50": 0.7042561983471074,
+          "worst": 11.25880071662763,
+          "violations": 1.0,
+          "mean_rmse": 10.644536717424222
+        },
+        "naive": {
+          "mean_ratio": 1.0,
+          "harm10": 0.0,
+          "severe50": 0.0,
+          "worst": 1.0,
+          "violations": 0.0,
+          "mean_rmse": 4.964962959137697
+        },
+        "gauss_ss": {
+          "mean_ratio": 1.973717264996327,
+          "harm10": 0.8502066115702479,
+          "severe50": 0.583801652892562,
+          "worst": 7.72415048485411,
+          "violations": 1.0,
+          "mean_rmse": 8.579501482461799
+        },
+        "imm": {
+          "mean_ratio": 1.1930687886717684,
+          "harm10": 0.3713636363636364,
+          "severe50": 0.13954545454545453,
+          "worst": 3.334075856413108,
+          "violations": 1.0,
+          "mean_rmse": 5.673906567358
+        },
+        "certified_single": {
+          "mean_ratio": 1.0,
+          "harm10": 0.0,
+          "severe50": 0.0,
+          "worst": 1.0,
+          "violations": 0.0,
+          "mean_rmse": 4.964962959137697
+        },
+        "certified_two_level": {
+          "mean_ratio": 1.0,
+          "harm10": 0.0,
+          "severe50": 0.0,
+          "worst": 1.0,
+          "violations": 0.0,
+          "mean_rmse": 4.964962959137697
+        }
+      }
+    },
+    "pool_mean_rmse": {
+      "fixed": 5.766553450925927,
+      "sagehusa": 6.053652734010003,
+      "covmatch": 6.947931108190185,
+      "learnedR": 4.865974208781957,
+      "knet": 10.68073792475464,
+      "learnedR_gauss_ss": 4.865974208781957,
+      "knet_gauss_ss": 8.600261960749133,
+      "learnedR_imm": 4.87206675626273,
+      "knet_imm": 5.677785372931275,
+      "classical": 4.966221841800398
+    }
+  },
+  "setup": {
+    "sim": {
+      "q": {
+        "q_accel": 0.2,
+        "q_gyro": 0.02
+      },
+      "cfg": {
+        "kappa": 3.0,
+        "detector_val_acc": 0.9797724399494311,
+        "classical_vi": 4.0,
+        "classical_qthr": 2.0,
+        "classical_val_rmse": 8.374999288427547,
+        "learned_vi": 16.0,
+        "learned_val_rmse": 8.172156219510695
+      },
+      "detector_path": "../results/detector_k3.0.pt",
+      "knet_path": "../results/knet_sim.npz",
+      "sh_b": 0.99,
+      "cm_N": 10,
+      "knet_train_trajectories": 150
+    },
+    "real": {
+      "q": {
+        "q_accel": 0.05,
+        "q_gyro": 0.002,
+        "q_bias": 1e-06
+      },
+      "cfg": {
+        "kappa": 3.0,
+        "detector_acc": 0.9697674418604652,
+        "n_train_fixes": 2964,
+        "n_degraded": 440,
+        "classical_vi": 16.0,
+        "classical_qthr": 1.0,
+        "classical_tune_rmse": 4.459003556470097,
+        "learned_vi": 16.0,
+        "learned_tune_rmse": 4.41239504032394
+      },
+      "detector_path": "../results/detector_real_k3.0.pt",
+      "knet_path": "../results/knet_real.npz",
+      "sh_b": 0.9,
+      "cm_N": 10
+    }
+  }
+}

@@ -1,0 +1,4 @@
+# Keep every file byte-for-byte identical on all platforms: the pre-registration
+# files in results/ carry SHA-256 fingerprints of the code, and line-ending
+# conversion would change those bytes.
+* -text

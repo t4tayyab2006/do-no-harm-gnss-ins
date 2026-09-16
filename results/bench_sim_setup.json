@@ -1,0 +1,20 @@
+{
+  "q": {
+    "q_accel": 0.2,
+    "q_gyro": 0.02
+  },
+  "cfg": {
+    "kappa": 3.0,
+    "detector_val_acc": 0.9797724399494311,
+    "classical_vi": 4.0,
+    "classical_qthr": 2.0,
+    "classical_val_rmse": 8.374999288427547,
+    "learned_vi": 16.0,
+    "learned_val_rmse": 8.172156219510695
+  },
+  "detector_path": "../results/detector_k3.0.pt",
+  "knet_path": "../results/knet_sim.npz",
+  "sh_b": 0.99,
+  "cm_N": 10,
+  "knet_train_trajectories": 150
+}

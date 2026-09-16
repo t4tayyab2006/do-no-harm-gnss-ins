@@ -1,0 +1,417 @@
+{
+  "tuned_Q": {
+    "q_accel": 0.05,
+    "q_gyro": 0.002,
+    "q_bias": 1e-06
+  },
+  "design": {
+    "single": [
+      0.1,
+      0.1
+    ],
+    "two_level": [
+      [
+        0.2,
+        0.05
+      ],
+      [
+        0.05,
+        0.5
+      ]
+    ],
+    "delta": 0.1
+  },
+  "learned_k0": {
+    "single": {
+      "mean_ratio": 0.9982600094329857,
+      "harm5": 0.09190082644628099,
+      "harm10": 0.02082644628099174,
+      "severe50": 0.0,
+      "worst": 1.1184385202117257,
+      "median_lambda": 2.0,
+      "mean_rmse": 5.552243956626901,
+      "p_harm10_exceeds_0p10": 0.07,
+      "p_severe_exceeds_0p05": 0.0
+    },
+    "two_level": {
+      "mean_ratio": 0.998469859685814,
+      "harm5": 0.06028925619834711,
+      "harm10": 0.008636363636363635,
+      "severe50": 0.0,
+      "worst": 1.0778451066947035,
+      "median_lambda": 2.0,
+      "mean_rmse": 5.54997982612072,
+      "p_harm10_exceeds_0p10": 0.0,
+      "p_severe_exceeds_0p05": 0.0
+    },
+    "naive": {
+      "mean_ratio": 0.9454831317021831,
+      "harm5": 0.28351239669421485,
+      "harm10": 0.21776859504132232,
+      "severe50": 0.012355371900826447,
+      "worst": 2.0131387169276302,
+      "median_lambda": 24.0,
+      "mean_rmse": 5.11089408411909,
+      "p_harm10_exceeds_0p10": 1.0,
+      "p_severe_exceeds_0p05": 0.0
+    },
+    "ungated": {
+      "mean_ratio": 0.9433226939764319,
+      "harm5": 0.28256198347107436,
+      "harm10": 0.2168181818181818,
+      "severe50": 0.012355371900826447,
+      "worst": 2.0131387169276302,
+      "median_lambda": Infinity,
+      "mean_rmse": 5.085786161225953,
+      "p_harm10_exceeds_0p10": 1.0,
+      "p_severe_exceeds_0p05": 0.0
+    },
+    "pool": {
+      "fixed": 5.766553450925927,
+      "classical": 5.5515834080821165,
+      "learned": 5.090491015941518,
+      "oracle": 4.7372991579472306
+    },
+    "config": {
+      "kappa": 0.0,
+      "detector_acc": 0.9325581395348838,
+      "n_train_fixes": 2964,
+      "n_degraded": 440,
+      "classical_vi": 9.0,
+      "classical_qthr": 1.0,
+      "classical_tune_rmse": 4.7465860869537515,
+      "learned_vi": 16.0,
+      "learned_tune_rmse": 4.602932629181598
+    },
+    "reset_ablation": {
+      "0.0": {
+        "reset_ratio": 1.0,
+        "reset_worst": 1.0,
+        "noreset_ratio": 1.0,
+        "noreset_worst": 1.0
+      },
+      "1.0": {
+        "reset_ratio": 0.9999796569273494,
+        "reset_worst": 1.0780126149042624,
+        "noreset_ratio": 0.9977893644435647,
+        "noreset_worst": 1.0725761359021906
+      },
+      "2.0": {
+        "reset_ratio": 0.9948184794789579,
+        "reset_worst": 1.1595400103205091,
+        "noreset_ratio": 0.9880757537325859,
+        "noreset_worst": 1.1744481763556773
+      },
+      "3.0": {
+        "reset_ratio": 0.9944571539090206,
+        "reset_worst": 1.2741591871410316,
+        "noreset_ratio": 0.9806102521849215,
+        "noreset_worst": 1.322212572380347
+      },
+      "4.0": {
+        "reset_ratio": 0.9906140551316432,
+        "reset_worst": 1.4486552203008607,
+        "noreset_ratio": 0.9744514659943622,
+        "noreset_worst": 1.4263473656521042
+      },
+      "6.0": {
+        "reset_ratio": 0.9855303796737507,
+        "reset_worst": 1.6623018293449756,
+        "noreset_ratio": 0.9736963128282269,
+        "noreset_worst": 1.6623018293449756
+      },
+      "8.0": {
+        "reset_ratio": 0.9897859189923025,
+        "reset_worst": 1.6623018293449756,
+        "noreset_ratio": 0.9726438557485774,
+        "noreset_worst": 1.6623018293449756
+      },
+      "12.0": {
+        "reset_ratio": 0.9669281561207236,
+        "reset_worst": 1.7325088261503632,
+        "noreset_ratio": 0.9554369655961085,
+        "noreset_worst": 1.8039707508291434
+      },
+      "16.0": {
+        "reset_ratio": 0.9489692084346677,
+        "reset_worst": 2.4117337257123435,
+        "noreset_ratio": 0.9473504219134516,
+        "noreset_worst": 2.4117337257123435
+      },
+      "24.0": {
+        "reset_ratio": 0.9448083718960212,
+        "reset_worst": 2.4117337257123435,
+        "noreset_ratio": 0.944805622580381,
+        "noreset_worst": 2.4117337257123435
+      },
+      "inf": {
+        "reset_ratio": 0.9436285235412541,
+        "reset_worst": 2.4117337257123435,
+        "noreset_ratio": 0.9436285235412541,
+        "noreset_worst": 2.4117337257123435
+      }
+    }
+  },
+  "learned_k3": {
+    "single": {
+      "mean_ratio": 0.9723377075176923,
+      "harm5": 0.13673553719008263,
+      "harm10": 0.059710743801652894,
+      "severe50": 0.004297520661157025,
+      "worst": 1.3948999979820167,
+      "median_lambda": 6.0,
+      "mean_rmse": 4.839813456897742,
+      "p_harm10_exceeds_0p10": 0.06,
+      "p_severe_exceeds_0p05": 0.0
+    },
+    "two_level": {
+      "mean_ratio": 0.9744617194118564,
+      "harm5": 0.1281404958677686,
+      "harm10": 0.05289256198347107,
+      "severe50": 0.004090909090909091,
+      "worst": 1.3797477758652053,
+      "median_lambda": 4.0,
+      "mean_rmse": 4.848977272238484,
+      "p_harm10_exceeds_0p10": 0.045,
+      "p_severe_exceeds_0p05": 0.0
+    },
+    "naive": {
+      "mean_ratio": 0.9719884184872839,
+      "harm5": 0.1528099173553719,
+      "harm10": 0.0716115702479339,
+      "severe50": 0.006280991735537189,
+      "worst": 1.4722519598616908,
+      "median_lambda": 8.0,
+      "mean_rmse": 4.845685256480382,
+      "p_harm10_exceeds_0p10": 0.11,
+      "p_severe_exceeds_0p05": 0.0
+    },
+    "ungated": {
+      "mean_ratio": 0.9756237075272335,
+      "harm5": 0.16867768595041321,
+      "harm10": 0.0912396694214876,
+      "severe50": 0.011776859504132231,
+      "worst": 1.8581458731659273,
+      "median_lambda": Infinity,
+      "mean_rmse": 4.864616446081515,
+      "p_harm10_exceeds_0p10": 0.255,
+      "p_severe_exceeds_0p05": 0.0
+    },
+    "pool": {
+      "fixed": 5.766553450925927,
+      "classical": 4.966221841800398,
+      "learned": 4.865974208781957,
+      "oracle": 4.7372991579472306
+    },
+    "config": {
+      "kappa": 3.0,
+      "detector_acc": 0.9697674418604652,
+      "n_train_fixes": 2964,
+      "n_degraded": 440,
+      "classical_vi": 16.0,
+      "classical_qthr": 1.0,
+      "classical_tune_rmse": 4.459003556470097,
+      "learned_vi": 16.0,
+      "learned_tune_rmse": 4.41239504032394
+    },
+    "reset_ablation": {
+      "0.0": {
+        "reset_ratio": 1.0,
+        "reset_worst": 1.0,
+        "noreset_ratio": 1.0,
+        "noreset_worst": 1.0
+      },
+      "1.0": {
+        "reset_ratio": 0.9959110476044629,
+        "reset_worst": 1.0736898828694994,
+        "noreset_ratio": 0.9940891467426053,
+        "noreset_worst": 1.1227286629779656
+      },
+      "2.0": {
+        "reset_ratio": 0.9879770592139321,
+        "reset_worst": 1.1693976261020584,
+        "noreset_ratio": 0.9854280464796198,
+        "noreset_worst": 1.1728986775144863
+      },
+      "3.0": {
+        "reset_ratio": 0.9784216791673903,
+        "reset_worst": 1.3344504190865767,
+        "noreset_ratio": 0.977905813201765,
+        "noreset_worst": 1.3304607107709718
+      },
+      "4.0": {
+        "reset_ratio": 0.9756127075581991,
+        "reset_worst": 1.5012243810832355,
+        "noreset_ratio": 0.974999024915853,
+        "noreset_worst": 1.5012243810832355
+      },
+      "6.0": {
+        "reset_ratio": 0.9687423465329177,
+        "reset_worst": 1.5012243810832355,
+        "noreset_ratio": 0.9697230651525323,
+        "noreset_worst": 1.5012243810832355
+      },
+      "8.0": {
+        "reset_ratio": 0.9686143226106796,
+        "reset_worst": 1.5012243810832355,
+        "noreset_ratio": 0.9687637046596053,
+        "noreset_worst": 1.5012243810832355
+      },
+      "12.0": {
+        "reset_ratio": 0.9696763768557937,
+        "reset_worst": 1.6195010493210997,
+        "noreset_ratio": 0.970869351297111,
+        "noreset_worst": 1.6195010493210997
+      },
+      "16.0": {
+        "reset_ratio": 0.9707469237203166,
+        "reset_worst": 1.6195010493210997,
+        "noreset_ratio": 0.9706040034748591,
+        "noreset_worst": 1.6195010493210997
+      },
+      "24.0": {
+        "reset_ratio": 0.9718810381593183,
+        "reset_worst": 1.6195010493210997,
+        "noreset_ratio": 0.9717931036578882,
+        "noreset_worst": 1.6195010493210997
+      },
+      "inf": {
+        "reset_ratio": 0.9758031405096976,
+        "reset_worst": 2.1977272702151454,
+        "noreset_ratio": 0.9758031405096976,
+        "noreset_worst": 2.1977272702151454
+      }
+    }
+  },
+  "perfectR_k3": {
+    "single": {
+      "mean_ratio": 0.9780618829402041,
+      "harm5": 0.12099173553719009,
+      "harm10": 0.05665289256198348,
+      "severe50": 4.132231404958678e-05,
+      "worst": 1.2685157433477519,
+      "median_lambda": 3.0,
+      "mean_rmse": 4.874872319312204,
+      "p_harm10_exceeds_0p10": 0.115,
+      "p_severe_exceeds_0p05": 0.0
+    },
+    "two_level": {
+      "mean_ratio": 0.9708213694074604,
+      "harm5": 0.13462809917355373,
+      "harm10": 0.07380165289256198,
+      "severe50": 0.0009090909090909091,
+      "worst": 1.333013225988077,
+      "median_lambda": 3.0,
+      "mean_rmse": 4.8425245390095,
+      "p_harm10_exceeds_0p10": 0.25,
+      "p_severe_exceeds_0p05": 0.0
+    },
+    "naive": {
+      "mean_ratio": 0.9473700489298588,
+      "harm5": 0.16037190082644628,
+      "harm10": 0.11533057851239673,
+      "severe50": 0.002933884297520661,
+      "worst": 1.5070073781048112,
+      "median_lambda": 16.0,
+      "mean_rmse": 4.734721931600341,
+      "p_harm10_exceeds_0p10": 0.715,
+      "p_severe_exceeds_0p05": 0.0
+    },
+    "ungated": {
+      "mean_ratio": 0.9491579014944681,
+      "harm5": 0.1617768595041322,
+      "harm10": 0.11706611570247932,
+      "severe50": 0.007851239669421488,
+      "worst": 1.8593814979081946,
+      "median_lambda": Infinity,
+      "mean_rmse": 4.739078594850464,
+      "p_harm10_exceeds_0p10": 0.73,
+      "p_severe_exceeds_0p05": 0.0
+    },
+    "pool": {
+      "fixed": 5.766553450925927,
+      "classical": 4.966221841800398,
+      "learned": 4.7372991579472306,
+      "oracle": 4.7372991579472306
+    },
+    "config": {
+      "kappa": 3.0,
+      "detector_acc": 0.9697674418604652,
+      "n_train_fixes": 2964,
+      "n_degraded": 440,
+      "classical_vi": 16.0,
+      "classical_qthr": 1.0,
+      "classical_tune_rmse": 4.459003556470097,
+      "learned_vi": 16.0,
+      "learned_tune_rmse": 4.41239504032394
+    },
+    "reset_ablation": {
+      "0.0": {
+        "reset_ratio": 1.0,
+        "reset_worst": 1.0,
+        "noreset_ratio": 1.0,
+        "noreset_worst": 1.0
+      },
+      "1.0": {
+        "reset_ratio": 0.9968523567154383,
+        "reset_worst": 1.081129261197538,
+        "noreset_ratio": 0.994570834010891,
+        "noreset_worst": 1.1065945025159047
+      },
+      "2.0": {
+        "reset_ratio": 0.987786488034658,
+        "reset_worst": 1.211305253342723,
+        "noreset_ratio": 0.9846297400722701,
+        "noreset_worst": 1.2107744627652177
+      },
+      "3.0": {
+        "reset_ratio": 0.9764195850421075,
+        "reset_worst": 1.338761419491613,
+        "noreset_ratio": 0.9738574394198235,
+        "noreset_worst": 1.3362245773632342
+      },
+      "4.0": {
+        "reset_ratio": 0.9662169144614712,
+        "reset_worst": 1.444462582815993,
+        "noreset_ratio": 0.9652964303203021,
+        "noreset_worst": 1.444462582815993
+      },
+      "6.0": {
+        "reset_ratio": 0.9537014811077323,
+        "reset_worst": 1.444462582815993,
+        "noreset_ratio": 0.9529828665792012,
+        "noreset_worst": 1.444462582815993
+      },
+      "8.0": {
+        "reset_ratio": 0.9467177420627988,
+        "reset_worst": 1.444462582815993,
+        "noreset_ratio": 0.9464057064441578,
+        "noreset_worst": 1.444462582815993
+      },
+      "12.0": {
+        "reset_ratio": 0.9442663348210921,
+        "reset_worst": 1.4839967784586954,
+        "noreset_ratio": 0.9445423768352189,
+        "noreset_worst": 1.4842628348476374
+      },
+      "16.0": {
+        "reset_ratio": 0.9442696964841776,
+        "reset_worst": 1.6550622624859461,
+        "noreset_ratio": 0.9440550994977198,
+        "noreset_worst": 1.6550622624859461
+      },
+      "24.0": {
+        "reset_ratio": 0.9448649452470366,
+        "reset_worst": 1.6550622624859461,
+        "noreset_ratio": 0.9447741603768438,
+        "noreset_worst": 1.6550622624859461
+      },
+      "inf": {
+        "reset_ratio": 0.9487830924777003,
+        "reset_worst": 2.198877489968122,
+        "noreset_ratio": 0.9487830924777003,
+        "noreset_worst": 2.198877489968122
+      }
+    }
+  }
+}

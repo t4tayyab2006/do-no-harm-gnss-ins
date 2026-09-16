@@ -1,0 +1,7 @@
+  fixed-R EKF                                 11.3 us per IMU step  (   883x faster than real time)
+  classical adaptive (fallback)               11.4 us per IMU step  (   878x faster than real time)
+  learned-R filter                            12.6 us per IMU step  (   795x faster than real time)
+  KalmanNet-style filter                      18.1 us per IMU step  (   554x faster than real time)
+  certified gate (learned-R + fallback)       23.5 us per IMU step  (   425x faster than real time)
+  certified gate (KalmanNet + fallback)       17.8 us per IMU step  (   562x faster than real time)
+  LTT calibration (offline): 0.45 ms

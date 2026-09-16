@@ -1,0 +1,17 @@
+CONFIRMATORY TEST on 600 fresh trajectories (seeds 5000-5599), 200 splits of 300/300
+
+-- learnedR
+   ungated                        ratio 0.937  >10%  9.2%  >50%  1.8%  worst   3.48x  budget violated in  25.0% of splits
+   imm_heuristic                  ratio 0.933  >10%  3.8%  >50%  0.3%  worst   2.64x  budget violated in   0.0% of splits
+   certified_metre_gate           ratio 0.947  >10%  7.9%  >50%  0.2%  worst   1.56x  budget violated in   0.0% of splits
+   certified_predictive_switch    ratio 0.929  >10%  5.3%  >50%  0.5%  worst   2.69x  budget violated in   0.0% of splits
+   H1 validity (violations <= 10%): PASS
+
+-- knet
+   ungated                        ratio 2.746  >10% 32.3%  >50% 20.6%  worst 120.61x  budget violated in 100.0% of splits
+   imm_heuristic                  ratio 0.820  >10%  9.5%  >50%  0.7%  worst   1.92x  budget violated in   0.0% of splits
+   certified_metre_gate           ratio 1.000  >10%  0.0%  >50%  0.0%  worst   1.00x  budget violated in   0.0% of splits
+   certified_predictive_switch    ratio 0.923  >10%  4.9%  >50%  0.5%  worst   1.67x  budget violated in   4.0% of splits
+   H1 validity (violations <= 10%): PASS
+   H2 gain (mean ratio < 1 in >= 95% of splits): FAIL  [75.5% of splits]
+   H3 beats certified metre gate: PASS

@@ -1,0 +1,33 @@
+{
+  "fixed-R EKF": {
+    "us_per_imu_step": 11.325106666666665,
+    "x_realtime_at_100Hz": 882.9938908596006
+  },
+  "classical adaptive (fallback)": {
+    "us_per_imu_step": 11.393984444444438,
+    "x_realtime_at_100Hz": 877.6561043029923
+  },
+  "learned-R filter": {
+    "us_per_imu_step": 12.57249777777778,
+    "x_realtime_at_100Hz": 795.3868973972111
+  },
+  "certified gate (learned-R + fallback)": {
+    "us_per_imu_step": 23.53898000000001,
+    "x_realtime_at_100Hz": 424.82724400122675
+  },
+  "certified gate (KalmanNet + fallback)": {
+    "us_per_imu_step": 17.793486666666663,
+    "x_realtime_at_100Hz": 562.0033997458997
+  },
+  "LTT calibration (300 trajectories, 11 thresholds)": {
+    "ms": 0.44718399999999825
+  },
+  "KalmanNet-style filter (standalone)": {
+    "us_per_imu_step": 9.075264444444445,
+    "x_realtime_at_100Hz": 1101.8962655266366
+  },
+  "KalmanNet-style filter + fallback in lockstep (gate open)": {
+    "us_per_imu_step": 18.056253333333338,
+    "x_realtime_at_100Hz": 553.8247506496364
+  }
+}

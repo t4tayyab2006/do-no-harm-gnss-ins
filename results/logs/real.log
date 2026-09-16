@@ -1,0 +1,37 @@
+[real] re-deriving the d'=3 detector and fallback (same seed, same data)...
+  [d'=3.0] detector acc 0.970; classical vi=16.0 q_thr=1.0 (4.459 m); learned vi=16.0 (4.412 m)
+  reproduces the saved configuration exactly: True
+[real] tuning classical adaptive baselines on Nagoya drive 3...
+  Sage-Husa b: {0.9: np.float64(5.158), 0.95: np.float64(5.249), 0.98: np.float64(5.317), 0.99: np.float64(5.342)} -> 0.9
+  cov-matching N: {5: np.float64(6.359), 10: np.float64(5.67), 20: np.float64(6.96)} -> 10
+[real] training KalmanNet-style filter on Nagoya drives 1-2 (val: drive 3)...
+  [KNet] init val MSE 313.196 m^2 (gain head at median classical gain)
+  [KNet] epoch   1 train 251.291  val 309.150  best 309.150
+  [KNet] epoch   2 train 246.315  val 304.675  best 304.675
+  [KNet] epoch   3 train 241.139  val 299.270  best 299.270
+  [KNet] epoch   4 train 235.183  val 292.673  best 292.673
+  [KNet] epoch   5 train 228.282  val 284.823  best 284.823
+  [KNet] epoch   6 train 220.425  val 275.759  best 275.759
+  [KNet] epoch   7 train 211.690  val 265.569  best 265.569
+  [KNet] epoch   8 train 202.230  val 254.425  best 254.425
+  [KNet] epoch   9 train 192.212  val 242.528  best 242.528
+  [KNet] epoch  10 train 181.814  val 230.120  best 230.120
+  [KNet] epoch  11 train 171.222  val 217.443  best 217.443
+  [KNet] epoch  12 train 160.627  val 204.794  best 204.794
+  [KNet] epoch  13 train 150.220  val 192.435  best 192.435
+  [KNet] epoch  14 train 140.189  val 180.618  best 180.618
+  [KNet] epoch  15 train 130.672  val 169.592  best 169.592
+  [KNet] epoch  16 train 121.775  val 159.590  best 159.590
+  [KNet] epoch  17 train 113.600  val 150.817  best 150.817
+  [KNet] epoch  18 train 106.242  val 143.499  best 143.499
+  [KNet] epoch  19 train 99.860  val 138.065  best 138.065
+  [KNet] epoch  20 train 94.724  val 135.227  best 135.227
+  [KNet] epoch  21 train 90.971  val 135.452  best 135.227
+  [KNet] epoch  26 train 76.673  val 147.481  best 135.227
+  [KNet] epoch  29 train 69.844  val 130.165  best 130.165
+  [KNet] epoch  30 train 67.971  val 126.294  best 126.294
+  [KNet] epoch  31 train 66.221  val 124.931  best 124.931
+  [KNet] epoch  36 train 57.323  val 155.970  best 124.931
+  [KNet] epoch  41 train 51.206  val 135.144  best 124.931
+  trained in 107s
+[real] 242 Tokyo segments in 64s

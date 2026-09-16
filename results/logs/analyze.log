@@ -1,0 +1,42 @@
+
+===== SIM =====   (ratios vs classical fallback; mean over 200 test halves)
+classical baseline                  ratio   >10%   worst   RMSE
+fixed                               1.161  44.8%   4.91x  11.50
+sagehusa                            1.471  45.9%  46.46x  13.68
+covmatch                            1.957  63.8%  40.13x  18.51
+fallback                            1.000   0.0%   1.00x  10.23
+-- learnedR
+   ungated                          0.965  11.3%  10.50x   9.35   >50%:  2.1%   viol(single):  82.5%
+   naive                            0.968  10.7%  10.14x   9.50   >50%:  1.9%   viol(single):  69.5%
+   gauss_ss                         0.938  10.4%   1.95x   9.32   >50%:  1.2%   viol(single):  58.0%
+   imm                              0.934   5.4%   1.95x   9.18   >50%:  1.2%   viol(single):   0.0%
+   certified_single                 0.950   7.1%   1.67x   9.80   >50%:  0.3%   viol(single):   0.0%
+   certified_two_level              0.951   7.0%   1.69x   9.80   >50%:  0.3%   viol(single):   0.0%
+-- knet
+   ungated                          2.194  33.1%  94.55x  17.63   >50%: 21.7%   viol(single): 100.0%
+   naive                            1.000   0.0%   1.00x  10.23   >50%:  0.0%   viol(single):   0.0%
+   gauss_ss                         1.055  40.8%   4.13x   9.64   >50%: 17.3%   viol(single): 100.0%
+   imm                              0.840   8.3%   2.27x   7.59   >50%:  0.8%   viol(single):   5.0%
+   certified_single                 1.000   0.0%   1.00x  10.23   >50%:  0.0%   viol(single):   0.0%
+   certified_two_level              1.000   0.0%   1.00x  10.23   >50%:  0.0%   viol(single):   0.0%
+
+===== REAL =====   (ratios vs classical fallback; mean over 200 test halves)
+classical baseline                  ratio   >10%   worst   RMSE
+fixed                               1.231  52.4%   3.15x   5.77
+sagehusa                            1.263  53.6%   4.55x   6.04
+covmatch                            1.462  52.3%  10.45x   6.96
+fallback                            1.000   0.0%   1.00x   4.96
+-- learnedR
+   ungated                          0.976   9.1%   1.86x   4.86   >50%:  1.2%   viol(single):  25.5%
+   naive                            0.972   7.2%   1.47x   4.85   >50%:  0.6%   viol(single):  11.0%
+   gauss_ss                         0.976   9.1%   1.86x   4.86   >50%:  1.2%   viol(single):  25.5%
+   imm                              0.979   3.7%   1.52x   4.87   >50%:  0.4%   viol(single):   0.0%
+   certified_single                 0.972   6.0%   1.39x   4.84   >50%:  0.4%   viol(single):   6.0%
+   certified_two_level              0.974   5.3%   1.38x   4.85   >50%:  0.4%   viol(single):   4.5%
+-- knet
+   ungated                          2.491  89.1%  11.26x  10.64   >50%: 70.4%   viol(single): 100.0%
+   naive                            1.000   0.0%   1.00x   4.96   >50%:  0.0%   viol(single):   0.0%
+   gauss_ss                         1.974  85.0%   7.72x   8.58   >50%: 58.4%   viol(single): 100.0%
+   imm                              1.193  37.1%   3.33x   5.67   >50%: 14.0%   viol(single): 100.0%
+   certified_single                 1.000   0.0%   1.00x   4.96   >50%:  0.0%   viol(single):   0.0%
+   certified_two_level              1.000   0.0%   1.00x   4.96   >50%:  0.0%   viol(single):   0.0%

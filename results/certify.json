@@ -1,0 +1,268 @@
+{
+  "alpha_0.05": {
+    "config": {
+      "alpha": 0.05,
+      "delta": 0.1,
+      "eps": 0.05,
+      "n_cal": 300,
+      "n_test": 300,
+      "n_splits": 200,
+      "n_pool": 600
+    },
+    "summary": {
+      "certified_reset": {
+        "mean_rmse": 10.531341674947402,
+        "mean_ratio_vs_classical": 1.0,
+        "harm_rate": 0.0,
+        "worst_ratio": 1.0,
+        "win_rate": 0.0,
+        "frac_splits_harm_exceeds_alpha": 0.0
+      },
+      "certified_noreset": {
+        "mean_rmse": 10.531341674947402,
+        "mean_ratio_vs_classical": 1.0,
+        "harm_rate": 0.0,
+        "worst_ratio": 1.0,
+        "win_rate": 0.0,
+        "frac_splits_harm_exceeds_alpha": 0.0
+      },
+      "naive_reset": {
+        "mean_rmse": 9.732807339550202,
+        "mean_ratio_vs_classical": 0.9656860490237028,
+        "harm_rate": 0.19671666666666668,
+        "worst_ratio": 2.941490692175488,
+        "win_rate": 0.7083166666666668,
+        "frac_splits_harm_exceeds_alpha": 1.0
+      },
+      "learned": {
+        "mean_rmse": 9.781334989597042,
+        "mean_ratio_vs_classical": 0.9685827793626813,
+        "harm_rate": 0.19671666666666668,
+        "worst_ratio": 3.334470406063155,
+        "win_rate": 0.7099500000000001,
+        "frac_splits_harm_exceeds_alpha": 1.0
+      },
+      "classical": {
+        "mean_rmse": 10.531341674947402,
+        "mean_ratio_vs_classical": 1.0,
+        "harm_rate": 0.0,
+        "worst_ratio": 1.0,
+        "win_rate": 0.0,
+        "frac_splits_harm_exceeds_alpha": 0.0
+      },
+      "fixed": {
+        "mean_rmse": 11.502159410773045,
+        "mean_ratio_vs_classical": 1.1224824225598815,
+        "harm_rate": 0.4828,
+        "worst_ratio": 4.4096621202366055,
+        "win_rate": 0.28991666666666666,
+        "frac_splits_harm_exceeds_alpha": 1.0
+      },
+      "oracle": {
+        "mean_rmse": 8.658448700627973,
+        "mean_ratio_vs_classical": 0.8796309206119378,
+        "harm_rate": 0.09359999999999999,
+        "worst_ratio": 3.11143558633019,
+        "win_rate": 0.7838,
+        "frac_splits_harm_exceeds_alpha": 1.0
+      }
+    },
+    "chosen_lambda_distribution": {
+      "0.0": 200
+    },
+    "open_frac_mean_by_lambda": {
+      "0.0": 0.0,
+      "0.5": 0.9207407407407407,
+      "0.75": 0.9676666666666667,
+      "1.0": 0.9846666666666668,
+      "1.25": 0.9910555555555557,
+      "1.5": 0.9945,
+      "2.0": 0.9968888888888888,
+      "2.5": 0.9979074074074076,
+      "3.0": 0.9984444444444444,
+      "4.0": 0.9992777777777777,
+      "5.0": 0.9995925925925927,
+      "6.0": 0.9997777777777777,
+      "8.0": 0.9998703703703704,
+      "inf": 1.0
+    }
+  },
+  "alpha_0.1": {
+    "config": {
+      "alpha": 0.1,
+      "delta": 0.1,
+      "eps": 0.05,
+      "n_cal": 300,
+      "n_test": 300,
+      "n_splits": 200,
+      "n_pool": 600
+    },
+    "summary": {
+      "certified_reset": {
+        "mean_rmse": 10.531341674947402,
+        "mean_ratio_vs_classical": 1.0,
+        "harm_rate": 0.0,
+        "worst_ratio": 1.0,
+        "win_rate": 0.0,
+        "frac_splits_harm_exceeds_alpha": 0.0
+      },
+      "certified_noreset": {
+        "mean_rmse": 10.531341674947402,
+        "mean_ratio_vs_classical": 1.0,
+        "harm_rate": 0.0,
+        "worst_ratio": 1.0,
+        "win_rate": 0.0,
+        "frac_splits_harm_exceeds_alpha": 0.0
+      },
+      "naive_reset": {
+        "mean_rmse": 9.732807339550202,
+        "mean_ratio_vs_classical": 0.9656860490237028,
+        "harm_rate": 0.19671666666666668,
+        "worst_ratio": 2.941490692175488,
+        "win_rate": 0.7083166666666668,
+        "frac_splits_harm_exceeds_alpha": 1.0
+      },
+      "learned": {
+        "mean_rmse": 9.781334989597042,
+        "mean_ratio_vs_classical": 0.9685827793626813,
+        "harm_rate": 0.19671666666666668,
+        "worst_ratio": 3.334470406063155,
+        "win_rate": 0.7099500000000001,
+        "frac_splits_harm_exceeds_alpha": 1.0
+      },
+      "classical": {
+        "mean_rmse": 10.531341674947402,
+        "mean_ratio_vs_classical": 1.0,
+        "harm_rate": 0.0,
+        "worst_ratio": 1.0,
+        "win_rate": 0.0,
+        "frac_splits_harm_exceeds_alpha": 0.0
+      },
+      "fixed": {
+        "mean_rmse": 11.502159410773045,
+        "mean_ratio_vs_classical": 1.1224824225598815,
+        "harm_rate": 0.4828,
+        "worst_ratio": 4.4096621202366055,
+        "win_rate": 0.28991666666666666,
+        "frac_splits_harm_exceeds_alpha": 1.0
+      },
+      "oracle": {
+        "mean_rmse": 8.658448700627973,
+        "mean_ratio_vs_classical": 0.8796309206119378,
+        "harm_rate": 0.09359999999999999,
+        "worst_ratio": 3.11143558633019,
+        "win_rate": 0.7838,
+        "frac_splits_harm_exceeds_alpha": 0.27
+      }
+    },
+    "chosen_lambda_distribution": {
+      "0.0": 200
+    },
+    "open_frac_mean_by_lambda": {
+      "0.0": 0.0,
+      "0.5": 0.9207407407407407,
+      "0.75": 0.9676666666666667,
+      "1.0": 0.9846666666666668,
+      "1.25": 0.9910555555555557,
+      "1.5": 0.9945,
+      "2.0": 0.9968888888888888,
+      "2.5": 0.9979074074074076,
+      "3.0": 0.9984444444444444,
+      "4.0": 0.9992777777777777,
+      "5.0": 0.9995925925925927,
+      "6.0": 0.9997777777777777,
+      "8.0": 0.9998703703703704,
+      "inf": 1.0
+    }
+  },
+  "alpha_0.2": {
+    "config": {
+      "alpha": 0.2,
+      "delta": 0.1,
+      "eps": 0.05,
+      "n_cal": 300,
+      "n_test": 300,
+      "n_splits": 200,
+      "n_pool": 600
+    },
+    "summary": {
+      "certified_reset": {
+        "mean_rmse": 10.32589910383866,
+        "mean_ratio_vs_classical": 0.9887205450694904,
+        "harm_rate": 0.1353,
+        "worst_ratio": 1.6488451645358435,
+        "win_rate": 0.47431666666666666,
+        "frac_splits_harm_exceeds_alpha": 0.01
+      },
+      "certified_noreset": {
+        "mean_rmse": 9.883622378948512,
+        "mean_ratio_vs_classical": 0.9660626618651784,
+        "harm_rate": 0.16078333333333333,
+        "worst_ratio": 2.5541464682873904,
+        "win_rate": 0.6860499999999999,
+        "frac_splits_harm_exceeds_alpha": 0.125
+      },
+      "naive_reset": {
+        "mean_rmse": 9.732807339550202,
+        "mean_ratio_vs_classical": 0.9656860490237028,
+        "harm_rate": 0.19671666666666668,
+        "worst_ratio": 2.941490692175488,
+        "win_rate": 0.7083166666666668,
+        "frac_splits_harm_exceeds_alpha": 0.35
+      },
+      "learned": {
+        "mean_rmse": 9.781334989597042,
+        "mean_ratio_vs_classical": 0.9685827793626813,
+        "harm_rate": 0.19671666666666668,
+        "worst_ratio": 3.334470406063155,
+        "win_rate": 0.7099500000000001,
+        "frac_splits_harm_exceeds_alpha": 0.375
+      },
+      "classical": {
+        "mean_rmse": 10.531341674947402,
+        "mean_ratio_vs_classical": 1.0,
+        "harm_rate": 0.0,
+        "worst_ratio": 1.0,
+        "win_rate": 0.0,
+        "frac_splits_harm_exceeds_alpha": 0.0
+      },
+      "fixed": {
+        "mean_rmse": 11.502159410773045,
+        "mean_ratio_vs_classical": 1.1224824225598815,
+        "harm_rate": 0.4828,
+        "worst_ratio": 4.4096621202366055,
+        "win_rate": 0.28991666666666666,
+        "frac_splits_harm_exceeds_alpha": 1.0
+      },
+      "oracle": {
+        "mean_rmse": 8.658448700627973,
+        "mean_ratio_vs_classical": 0.8796309206119378,
+        "harm_rate": 0.09359999999999999,
+        "worst_ratio": 3.11143558633019,
+        "win_rate": 0.7838,
+        "frac_splits_harm_exceeds_alpha": 0.0
+      }
+    },
+    "chosen_lambda_distribution": {
+      "0.0": 30,
+      "0.5": 168,
+      "0.75": 2
+    },
+    "open_frac_mean_by_lambda": {
+      "0.0": 0.0,
+      "0.5": 0.9207407407407407,
+      "0.75": 0.9676666666666667,
+      "1.0": 0.9846666666666668,
+      "1.25": 0.9910555555555557,
+      "1.5": 0.9945,
+      "2.0": 0.9968888888888888,
+      "2.5": 0.9979074074074076,
+      "3.0": 0.9984444444444444,
+      "4.0": 0.9992777777777777,
+      "5.0": 0.9995925925925927,
+      "6.0": 0.9997777777777777,
+      "8.0": 0.9998703703703704,
+      "inf": 1.0
+    }
+  }
+}

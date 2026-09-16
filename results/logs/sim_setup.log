@@ -1,0 +1,49 @@
+[sim] tuning classical adaptive baselines on validation seeds 100-119...
+  Sage-Husa b: {0.9: np.float64(16.573), 0.95: np.float64(13.187), 0.98: np.float64(15.281), 0.99: np.float64(12.397)} -> 0.99
+  cov-matching N: {5: np.float64(24.259), 10: np.float64(12.724), 20: np.float64(13.91)} -> 10
+[sim] training KalmanNet-style filter on 150 trajectories (val 100-119)...
+  [KNet] init val MSE 3787.921 m^2 (gain head at median classical gain)
+  [KNet] epoch   1 train 3200.538  val 1242.964  best 1242.964
+  [KNet] epoch   2 train 1702.988  val 710.964  best 710.964
+  [KNet] epoch   3 train 1045.179  val 655.609  best 655.609
+  [KNet] epoch   4 train 893.195  val 412.214  best 412.214
+  [KNet] epoch   5 train 686.627  val 338.133  best 338.133
+  [KNet] epoch   6 train 592.804  val 406.750  best 338.133
+  [KNet] epoch  10 train 285.377  val 332.613  best 332.613
+  [KNet] epoch  11 train 269.618  val 313.356  best 313.356
+  [KNet] epoch  12 train 239.369  val 241.257  best 241.257
+  [KNet] epoch  13 train 207.252  val 168.535  best 168.535
+  [KNet] epoch  14 train 223.299  val 143.310  best 143.310
+  [KNet] epoch  15 train 215.928  val 142.823  best 142.823
+  [KNet] epoch  16 train 182.361  val 165.188  best 142.823
+  [KNet] epoch  21 train 161.405  val 151.468  best 142.823
+  [KNet] epoch  23 train 147.492  val 139.829  best 139.829
+  [KNet] epoch  24 train 143.499  val 135.566  best 135.566
+  [KNet] epoch  26 train 135.989  val 136.043  best 135.566
+  [KNet] epoch  27 train 131.884  val 113.514  best 113.514
+  [KNet] epoch  28 train 126.953  val 101.850  best 101.850
+  [KNet] epoch  29 train 122.640  val 97.278  best 97.278
+  [KNet] epoch  30 train 118.801  val 94.600  best 94.600
+  [KNet] epoch  31 train 114.531  val 99.021  best 94.600
+  [KNet] epoch  33 train 108.425  val 94.235  best 94.235
+  [KNet] epoch  34 train 104.685  val 82.231  best 82.231
+  [KNet] epoch  35 train 101.278  val 76.465  best 76.465
+  [KNet] epoch  36 train 98.199  val 72.051  best 72.051
+  [KNet] epoch  37 train 94.988  val 70.544  best 70.544
+  [KNet] epoch  38 train 92.496  val 68.585  best 68.585
+  [KNet] epoch  39 train 90.045  val 64.806  best 64.806
+  [KNet] epoch  40 train 86.798  val 61.852  best 61.852
+  [KNet] epoch  41 train 83.871  val 60.688  best 60.688
+  [KNet] epoch  42 train 81.415  val 59.619  best 59.619
+  [KNet] epoch  43 train 78.815  val 57.812  best 57.812
+  [KNet] epoch  44 train 76.104  val 57.647  best 57.647
+  [KNet] epoch  46 train 71.399  val 59.368  best 57.647
+  [KNet] epoch  51 train 63.363  val 72.130  best 57.647
+  [KNet] epoch  55 train 73.506  val 56.748  best 56.748
+  [KNet] epoch  56 train 59.871  val 153.311  best 56.748
+  [KNet] epoch  61 train 63.630  val 52.352  best 52.352
+  [KNet] epoch  62 train 62.234  val 48.977  best 48.977
+  [KNet] epoch  63 train 57.260  val 48.195  best 48.195
+  [KNet] epoch  66 train 91.064  val 57.774  best 48.195
+  [KNet] epoch  71 train nan  val nan  best 48.195
+  trained in 585s

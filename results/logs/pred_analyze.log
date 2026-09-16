@@ -1,0 +1,18 @@
+
+[sim] learnedR: dev certified mean ratio  sep_m 1.000  pred_switch 1.000  -> selected sep_m
+   pool, certified sep_m          ratio 0.951  >10%  7.0%  >50%  0.3%  worst 1.69x  viol(freq)  0.0%  viol(sev)  0.0%
+   pool, certified pred_switch    ratio 0.963  >10%  2.0%  >50%  0.5%  worst 1.61x  viol(freq)  0.0%  viol(sev)  0.0%
+
+[sim] knet: dev certified mean ratio  sep_m 1.000  pred_switch 1.000  -> selected sep_m
+   pool, certified sep_m          ratio 1.000  >10%  0.0%  >50%  0.0%  worst 1.00x  viol(freq)  0.0%  viol(sev)  0.0%
+   pool, certified pred_switch    ratio 0.892  >10%  6.1%  >50%  0.6%  worst 2.18x  viol(freq)  0.0%  viol(sev)  2.0%
+
+[real] learnedR: dev certified mean ratio  sep_m 1.000  pred_switch 1.000  -> selected sep_m
+   pool, certified sep_m          ratio 0.974  >10%  5.3%  >50%  0.4%  worst 1.38x  viol(freq)  3.5%  viol(sev)  0.0%
+   pool, certified pred_switch    ratio 0.983  >10%  4.4%  >50%  0.7%  worst 1.61x  viol(freq)  6.0%  viol(sev)  0.0%
+
+[real] knet: dev certified mean ratio  sep_m 1.000  pred_switch 1.000  -> selected sep_m
+   pool, certified sep_m          ratio 1.000  >10%  0.0%  >50%  0.0%  worst 1.00x  viol(freq)  0.0%  viol(sev)  0.0%
+   pool, certified pred_switch    ratio 1.000  >10%  0.0%  >50%  0.0%  worst 1.00x  viol(freq)  0.0%  viol(sev)  0.0%
+
+Wrote ../results/benchmark_pred.json

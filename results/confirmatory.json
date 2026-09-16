@@ -1,0 +1,85 @@
+{
+  "n": 600,
+  "splits": 200,
+  "n_cal": 300,
+  "learnedR": {
+    "certified_predictive_switch": {
+      "mean_ratio": 0.9290805981875764,
+      "harm5": 0.09801666666666665,
+      "harm10": 0.053483333333333334,
+      "severe50": 0.0046,
+      "worst": 2.685758861120958,
+      "violation_frequency": 0.0,
+      "share_splits_better_than_classical": 1.0
+    },
+    "certified_metre_gate": {
+      "mean_ratio": 0.9472635600900131,
+      "harm5": 0.11240000000000001,
+      "harm10": 0.07936666666666667,
+      "severe50": 0.0016,
+      "worst": 1.5551262032812687,
+      "violation_frequency": 0.0,
+      "share_splits_better_than_classical": 1.0
+    },
+    "imm_heuristic": {
+      "mean_ratio": 0.9333642827364289,
+      "harm5": 0.07606666666666666,
+      "harm10": 0.037599999999999995,
+      "severe50": 0.0031833333333333336,
+      "worst": 2.6368790443844663,
+      "violation_frequency": 0.0,
+      "share_splits_better_than_classical": 1.0
+    },
+    "ungated": {
+      "mean_ratio": 0.9366993748556982,
+      "harm5": 0.13465000000000002,
+      "harm10": 0.09241666666666667,
+      "severe50": 0.017866666666666666,
+      "worst": 3.4768898466489726,
+      "violation_frequency": 0.25,
+      "share_splits_better_than_classical": 1.0
+    },
+    "H1_validity_pass": true
+  },
+  "knet": {
+    "certified_predictive_switch": {
+      "mean_ratio": 0.9233549811332997,
+      "harm5": 0.08398333333333334,
+      "harm10": 0.04885,
+      "severe50": 0.0053,
+      "worst": 1.6689648210242551,
+      "violation_frequency": 0.04,
+      "share_splits_better_than_classical": 0.755
+    },
+    "certified_metre_gate": {
+      "mean_ratio": 1.0,
+      "harm5": 0.0,
+      "harm10": 0.0,
+      "severe50": 0.0,
+      "worst": 1.0,
+      "violation_frequency": 0.0,
+      "share_splits_better_than_classical": 0.0
+    },
+    "imm_heuristic": {
+      "mean_ratio": 0.8199290113274641,
+      "harm5": 0.14881666666666668,
+      "harm10": 0.09538333333333332,
+      "severe50": 0.006783333333333333,
+      "worst": 1.9240578803358181,
+      "violation_frequency": 0.0,
+      "share_splits_better_than_classical": 1.0
+    },
+    "ungated": {
+      "mean_ratio": 2.745762570445778,
+      "harm5": 0.3453,
+      "harm10": 0.3234166666666667,
+      "severe50": 0.20605,
+      "worst": 120.61181015682479,
+      "violation_frequency": 1.0,
+      "share_splits_better_than_classical": 0.0
+    },
+    "H1_validity_pass": true,
+    "H2_gain_pass": false,
+    "H3_beats_metre_gate_pass": true
+  }
+}

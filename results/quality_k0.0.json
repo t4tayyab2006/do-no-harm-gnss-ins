@@ -1,0 +1,91 @@
+{
+  "config": {
+    "kappa": 0.0,
+    "detector_val_acc": 0.9292035398230089,
+    "classical_vi": 4.0,
+    "classical_qthr": 2.0,
+    "classical_val_rmse": 8.848629296102562,
+    "learned_vi": 9.0,
+    "learned_val_rmse": 8.46266768021424
+  },
+  "baselines": {
+    "fixed": {
+      "mean_rmse": 11.477913282033779,
+      "mean_ratio": 1.1311029558873047,
+      "harm5": 0.48333333333333334,
+      "harm10": 0.39166666666666666,
+      "worst": 5.895337038265339
+    },
+    "classical": {
+      "mean_rmse": 10.446863300652815,
+      "mean_ratio": 1.0,
+      "harm5": 0.0,
+      "harm10": 0.0,
+      "worst": 1.0
+    },
+    "learned": {
+      "mean_rmse": 9.77698671565704,
+      "mean_ratio": 0.9786718960617103,
+      "harm5": 0.21666666666666667,
+      "harm10": 0.17666666666666667,
+      "worst": 6.624739319254947
+    },
+    "oracle": {
+      "mean_rmse": 8.642822386305031,
+      "mean_ratio": 0.8854195575521817,
+      "harm5": 0.11166666666666666,
+      "harm10": 0.08166666666666667,
+      "worst": 3.707091002307131
+    }
+  },
+  "certified": {
+    "eps0.05_alpha0.05": {
+      "mean_ratio": 0.9996907797267863,
+      "mean_rmse": 10.47277245783274,
+      "harm": 0.0,
+      "worst": 1.0393111240188018,
+      "p_harm_exceeds_alpha": 0.0,
+      "median_lambda": 1.0
+    },
+    "eps0.05_alpha0.1": {
+      "mean_ratio": 0.9997558466009102,
+      "mean_rmse": 10.387009163901253,
+      "harm": 0.00046666666666666666,
+      "worst": 1.0397304247001775,
+      "p_harm_exceeds_alpha": 0.0,
+      "median_lambda": 1.0
+    },
+    "eps0.05_alpha0.2": {
+      "mean_ratio": 0.9978569561632668,
+      "mean_rmse": 10.449986696296486,
+      "harm": 0.10934999999999999,
+      "worst": 1.2034612202456543,
+      "p_harm_exceeds_alpha": 0.06,
+      "median_lambda": 4.0
+    },
+    "eps0.1_alpha0.05": {
+      "mean_ratio": 1.0003374774002827,
+      "mean_rmse": 10.425360606773017,
+      "harm": 0.009783333333333333,
+      "worst": 1.0740013918194486,
+      "p_harm_exceeds_alpha": 0.0,
+      "median_lambda": 1.0
+    },
+    "eps0.1_alpha0.1": {
+      "mean_ratio": 0.9987048242452812,
+      "mean_rmse": 10.453165692904431,
+      "harm": 0.0383,
+      "worst": 1.1496592036891309,
+      "p_harm_exceeds_alpha": 0.025,
+      "median_lambda": 4.0
+    },
+    "eps0.1_alpha0.2": {
+      "mean_ratio": 0.9794645966737824,
+      "mean_rmse": 10.089259375672976,
+      "harm": 0.15831666666666666,
+      "worst": 2.6260061067943936,
+      "p_harm_exceeds_alpha": 0.035,
+      "median_lambda": 24.0
+    }
+  }
+}

@@ -1,0 +1,16 @@
+# third-party data (download separately, see README)
+data/
+
+# manuscript under review and working notes are not part of the code release
+manuscript/
+papers/
+paper_draft.md
+
+# Python
+__pycache__/
+*.pyc
+
+# temporary files
+*.tmp
+results/_*
+~$*
