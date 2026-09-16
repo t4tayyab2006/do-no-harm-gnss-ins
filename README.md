@@ -4,7 +4,7 @@ Code and results for the manuscript
 
 > M. Tayyab, *Do No Harm: Distribution-Free Certification of Learned Adaptive Filters for
 > GNSS/INS Integration via Learned-versus-Classical Solution Separation*, submitted to
-> **Sensors** (MDPI), 2026 — under review.
+> **IEEE Sensors Journal**, 2026 — under review.
 
 **Author:** Muhammad Tayyab — Department of Industrial and Information Engineering and
 Economics (DIIIE), University of L'Aquila, Italy — muhammad.tayyab@graduate.univaq.it
@@ -96,6 +96,7 @@ python calibration_size.py
 python make_figures.py
 python make_real_figures.py
 python make_method_figure.py
+python make_graphical_abstract.py
 ```
 
 ## Real data

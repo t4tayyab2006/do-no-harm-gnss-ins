@@ -463,7 +463,8 @@ def t_latex():
         png, pdf = os.path.join(RES, n + ".png"), os.path.join(RES, n + ".pdf")
         assert os.path.exists(pdf), f"{n}: no vector PDF"
         w, h = struct.unpack(">II", open(png, "rb").read(32)[16:24])
-        assert w >= 3000, f"{n}: {w}px wide"
+        min_w = 1800 if n == "fig_graphical_abstract" else 3000   # IEEE graphical abstract is 3 in wide
+        assert w >= min_w, f"{n}: {w}px wide (< 600 dpi at its print width)"
         assert open(pdf, "rb").read(5) == b"%PDF-", f"{n}: not a PDF"
         assert abs(os.path.getmtime(pdf) - os.path.getmtime(png)) < 600, \
             f"{n}: PNG and PDF are from different runs"
@@ -479,6 +480,53 @@ def t_latex():
     assert n_fig == js.count("add(FIG("), f"{n_fig} figures in LaTeX, {js.count('add(FIG(')} in the Word source"
     assert n_tab == js.count("add(TAB("), f"{n_tab} tables in LaTeX, {js.count('add(TAB(')} in the Word source"
     return f"LaTeX checks pass; {len(names)} figures as PNG+PDF; {n_fig} figures and {n_tab} tables in both versions"
+
+@test("T18 IEEE Sensors Journal version: <= 8 pages, numbers match the verified manuscript, compliant")
+def t_ieee():
+    import re
+    import zipfile
+    if not HAVE_MAN:
+        raise Skip("manuscript sources not in this checkout")
+    man = os.path.join(HERE, "..", "manuscript")
+    ieee = os.path.join(man, "ieee")
+    sys.path.insert(0, man)
+    import build_ieee as BI
+
+    report = json.load(open(os.path.join(ieee, "build_report.json")))
+    assert report["pages"] <= BI.PAGE_LIMIT, f"{report['pages']} pages > {BI.PAGE_LIMIT}"
+    assert 150 <= report["abstract_words"] <= 250, f"abstract {report['abstract_words']} words"
+    pdf = os.path.join(ieee, "Manuscript_IEEE_JSEN.pdf")
+    body_f = os.path.join(ieee, "paper_body.tex")
+    supp_f = os.path.join(ieee, "supplement_body.tex")
+    newest_src = max(os.path.getmtime(f) for f in (body_f, supp_f, os.path.join(man, "build_ieee.py")))
+    assert os.path.getmtime(pdf) >= newest_src, "IEEE PDF is older than its sources: run build_ieee.py"
+
+    # every decimal number and percentage must already be in the verified manuscript source
+    verified = open(MAN, encoding="utf-8").read()
+    ga = open(os.path.join(HERE, "make_graphical_abstract.py"), encoding="utf-8").read()
+    texts = [open(body_f, encoding="utf-8").read(), open(supp_f, encoding="utf-8").read(), BI.ABSTRACT,
+             re.search(r"HEADLINE = \{.*?\}", ga, re.S).group(0)]
+
+    def tokens(t):
+        t = t.replace("\\%", "%").replace("--", "-")
+        t = re.sub(r"https?://\S+|seeds? \d+-\d+|\\cite\{[^}]*\}|\\mref\{[^}]*\}|\\ref\{[^}]*\}|\\label\{[^}]*\}"
+                   r"|\\includegraphics\[[^\]]*\]|\\setlength\{[^}]*\}\{[^}]*\}", " ", t)  # layout, not results
+        return set(re.findall(r"(?<![\w.])\d+\.\d+(?![\w.])|(?<![\w.])\d+(?:\.\d+)?%", t))
+
+    have = tokens(verified)
+    missing = sorted(set().union(*map(tokens, texts)) - have)
+    assert not missing, f"numbers not in the verified manuscript: {missing}"
+    n_checked = len(set().union(*map(tokens, texts)))
+
+    assert "Claude" in BI.ACK and "Acknowledgment" in open(os.path.join(ieee, "submission", "paper.tex"),
+                                                            encoding="utf-8").read(), "AI disclosure missing"
+    assert "github.com/t4tayyab2006/do-no-harm-gnss-ins" in texts[0], "code link missing"
+    names = zipfile.ZipFile(os.path.join(ieee, "IEEE_JSEN_source.zip")).namelist()
+    for need in ["paper.tex", "supplement.tex", "ieeecolor.cls", "jsen.sty", "LOGO-jsen-web.eps",
+                 "fig_graphical_abstract.pdf"] + [f + ".pdf" for f in BI.FIGS_MAIN + BI.FIGS_SUPP]:
+        assert need in names, f"{need} missing from the source zip"
+    return (f"{report['pages']} pages (limit {BI.PAGE_LIMIT}); abstract {report['abstract_words']} words; "
+            f"{n_checked} numbers all in the verified manuscript; AI disclosure and code link present")
 
 if __name__ == "__main__":
     os.chdir(HERE)
