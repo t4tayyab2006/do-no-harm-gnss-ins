@@ -85,6 +85,6 @@ def save(fig, name, extra_bottom=0.0):
     fig.tight_layout(pad=0.4, rect=(0, extra_bottom, 1, 1))
     png, pdf = f"{R}/{name}.png", f"{R}/{name}.pdf"
     fig.savefig(png, dpi=DPI)
-    fig.savefig(pdf)
+    fig.savefig(pdf, metadata={"CreationDate": None, "ModDate": None})  # byte-identical on rebuild
     plt.close(fig)
     print(f"  {os.path.basename(png)} ({DPI} dpi) + {os.path.basename(pdf)} (vector)")

@@ -7,7 +7,6 @@ experiment_quality.py <kappa> (for each kappa) and ablation.py.
 
   results/fig_frontier.png   risk budget alpha -> share of gain kept, worst case
   results/fig_validity.png   the guarantee holds: test harm vs alpha, P(harm>alpha)
-  results/fig_tail.png       sorted per-trajectory ratios: ungated vs gated vs no-reset
   results/fig_kappa.png      learned detector across indicator informativeness
   results/final_summary.json key numbers quoted in the paper
 
@@ -20,7 +19,6 @@ import numpy as np
 import matplotlib
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
-from matplotlib.ticker import FuncFormatter
 
 import figstyle as FS
 from certify import ltt_select
@@ -115,34 +113,15 @@ def main():
     FS.panel(bx2, "(b)")
     FS.save(figv, "fig_validity")
 
-    # ---------- tail: ungated vs gated vs no-reset ----------
-    j12 = int(np.where(lam == 12.0)[0][0])
-    fig3, ax3 = plt.subplots(figsize=(FS.WIDTH_FULL, FS.H_WIDE))
-    curves = [("ungated perfect-$R$ component", comp / C, FS.VERM, "-"),
-              (r"gated + reset ($\lambda$ = 12 m)", G[:, j12] / C, FS.BLUE, "-")]
+    # ---------- reset ablation (numbers for the ablation table) ----------
     if os.path.exists(f"{R}/ablation_noreset.npz"):
         NR = np.load(f"{R}/ablation_noreset.npz")["gated"]
-        curves.append((r"gated, no reset ($\lambda$ = 12 m)", NR[:, j12] / C, FS.ORANGE, (0, (4, 2))))
         summary["ablation_reset"] = {
             str(l): dict(reset_ratio=float(np.mean(G[:, i] / C)), reset_harm5=float(np.mean(G[:, i] > 1.05 * C)),
                          reset_worst=float(np.max(G[:, i] / C)),
                          noreset_ratio=float(np.mean(NR[:, i] / C)), noreset_harm5=float(np.mean(NR[:, i] > 1.05 * C)),
                          noreset_worst=float(np.max(NR[:, i] / C)))
             for i, l in enumerate(lam)}
-    for name, r, col, ls in curves:
-        ax3.plot(np.arange(1, len(r) + 1), np.sort(r), color=col, ls=ls, lw=1.5, label=name)
-    ax3.axhline(1.0, color=FS.GREY, ls=":", lw=0.9)
-    ax3.set_yscale("log")
-    ax3.set_xlim(len(C) * 0.6, len(C) + 5)
-    hi = max(float(np.max(r)) for _, r, _, _ in curves)
-    ax3.set_ylim(0.88, hi * 1.18)
-    ax3.set_yticks([0.9, 1.0, 1.25, 1.5, 2.0, 3.0])
-    ax3.yaxis.set_major_formatter(FuncFormatter(lambda v, _: f"{v:g}"))
-    ax3.yaxis.set_minor_formatter(FuncFormatter(lambda v, _: ""))
-    ax3.set_xlabel("pool trajectories sorted by ratio (worst 40% shown)")
-    ax3.set_ylabel("RMSE ratio vs. classical (log scale)")
-    ax3.legend(loc="upper left")
-    FS.save(fig3, "fig_tail")
 
     # ---------- kappa sweep (learned detector) ----------
     ks = [k for k in [0.0, 1.0, 2.0, 3.0] if os.path.exists(f"{R}/quality_k{k}.npz")]
