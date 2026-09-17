@@ -501,6 +501,14 @@ def t_ieee():
     newest_src = max(os.path.getmtime(f) for f in (body_f, supp_f, os.path.join(man, "build_ieee.py")))
     assert os.path.getmtime(pdf) >= newest_src, "IEEE PDF is older than its sources: run build_ieee.py"
 
+    # review copy for colleagues: same layout, no acknowledgment, within the page limit
+    import fitz
+    review = os.path.join(ieee, "review_copy", "Tayyab_IEEE_JSEN_draft_for_review.pdf")
+    assert os.path.getmtime(review) >= newest_src, "review copy is older than its sources: run build_ieee.py"
+    rdoc = fitz.open(review)
+    assert rdoc.page_count <= BI.PAGE_LIMIT, f"review copy has {rdoc.page_count} pages"
+    assert "ACKNOWLEDGMENT" not in "".join(p.get_text() for p in rdoc).upper(), "review copy still has the acknowledgment"
+
     # every decimal number and percentage must already be in the verified manuscript source
     verified = open(MAN, encoding="utf-8").read()
     ga = open(os.path.join(HERE, "make_graphical_abstract.py"), encoding="utf-8").read()
