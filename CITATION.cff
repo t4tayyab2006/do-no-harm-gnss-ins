@@ -7,6 +7,7 @@ authors:
     email: muhammad.tayyab@graduate.univaq.it
     affiliation: "Department of Industrial and Information Engineering and Economics (DIIIE), University of L'Aquila, Italy"
 license: MIT
+doi: 10.5281/zenodo.22861254
 date-released: 2026-09-16
 keywords:
   - GNSS/INS integration

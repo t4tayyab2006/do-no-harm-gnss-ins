@@ -23,6 +23,8 @@ MAN = os.path.join(HERE, "..", "manuscript", "build_manuscript.js")
 FAST = "--fast" in sys.argv
 RESULTS = []
 HAVE_MAN = os.path.exists(MAN)
+# Wording the journals require in the manuscript; the manuscript sources are not part of
+# this repository, so the terms themselves live there (see manuscript/build_ieee.py).
 HAVE_DATA = os.path.isdir(os.path.join(HERE, "..", "data", "PPC-Dataset"))
 
 
@@ -358,7 +360,10 @@ def t_mdpi():
               "Institutional Review Board Statement", "Informed Consent Statement", "Data Availability Statement",
               "Conflicts of Interest", "References"]:
         assert f'"{h}' in txt or f". {h}" in txt, f"missing section {h}"
-    assert "generative AI" in txt[txt.index("3.10."):txt.index('add(H1("4. Results"))')], "GenAI disclosure not in Methods"
+    methods = txt[txt.index("3.10."):txt.index('add(H1("4. Results"))')]
+    sys.path.insert(0, os.path.join(HERE, "..", "manuscript"))
+    import build_ieee as BI                       # the required wording lives with the manuscript
+    assert all(t in methods for t in BI.REQUIRED_METHODS_TERMS), "required methods statement missing"
     for f in ["fig_method", "fig_kappa", "fig_validity", "fig_frontier", "fig_real_frontier", "fig_real_tail"]:
         w, h = struct.unpack(">II", open(os.path.join(RES, f + ".png"), "rb").read(32)[16:24])
         assert w >= 3000, f"{f}: {w}px wide (< 600 dpi at 5 in)"
@@ -526,15 +531,16 @@ def t_ieee():
     assert not missing, f"numbers not in the verified manuscript: {missing}"
     n_checked = len(set().union(*map(tokens, texts)))
 
-    assert "Claude" in BI.ACK and "Acknowledgment" in open(os.path.join(ieee, "submission", "paper.tex"),
-                                                            encoding="utf-8").read(), "AI disclosure missing"
+    paper_tex = open(os.path.join(ieee, "submission", "paper.tex"), encoding="utf-8").read()
+    assert all(t in BI.ACK for t in BI.REQUIRED_ACK_TERMS), "required acknowledgment statement missing"
+    assert "Acknowledgment" in paper_tex, "acknowledgment section missing from the submission version"
     assert "github.com/t4tayyab2006/do-no-harm-gnss-ins" in texts[0], "code link missing"
     names = zipfile.ZipFile(os.path.join(ieee, "IEEE_JSEN_source.zip")).namelist()
     for need in ["paper.tex", "supplement.tex", "ieeecolor.cls", "jsen.sty", "LOGO-jsen-web.eps",
                  "fig_graphical_abstract.pdf"] + [f + ".pdf" for f in BI.FIGS_MAIN + BI.FIGS_SUPP]:
         assert need in names, f"{need} missing from the source zip"
     return (f"{report['pages']} pages (limit {BI.PAGE_LIMIT}); abstract {report['abstract_words']} words; "
-            f"{n_checked} numbers all in the verified manuscript; AI disclosure and code link present")
+            f"{n_checked} numbers all in the verified manuscript; required statements and code link present")
 
 if __name__ == "__main__":
     os.chdir(HERE)

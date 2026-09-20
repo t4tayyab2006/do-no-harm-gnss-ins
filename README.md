@@ -6,6 +6,8 @@ Code and results for the manuscript
 > GNSS/INS Integration via Learned-versus-Classical Solution Separation*, submitted to
 > **IEEE Sensors Journal**, 2026 — under review.
 
+**Archived release:** [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.22861254.svg)](https://doi.org/10.5281/zenodo.22861254)
+
 **Author:** Muhammad Tayyab — Department of Industrial and Information Engineering and
 Economics (DIIIE), University of L'Aquila, Italy — muhammad.tayyab@graduate.univaq.it
 
